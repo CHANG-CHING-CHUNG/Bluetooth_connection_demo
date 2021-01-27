@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnServerOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Server On"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnConnectOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Connect to server"
+        app:layout_constraintEnd_toEndOf="@+id/btnServerOn"
+        app:layout_constraintStart_toStartOf="@+id/btnServerOn"
+        app:layout_constraintTop_toBottomOf="@+id/btnServerOn" />
+
+    <Button
+        android:id="@+id/btnDisconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Disconnect"
+        app:layout_constraintEnd_toEndOf="@+id/btnConnectOn"
+        app:layout_constraintStart_toStartOf="@+id/btnConnectOn"
+        app:layout_constraintTop_toBottomOf="@+id/btnConnectOn" />
+
+    <Button
+        android:id="@+id/btnPairedDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="get paired devices"
+        app:layout_constraintEnd_toEndOf="@+id/btnDisconnect"
+        app:layout_constraintStart_toStartOf="@+id/btnDisconnect"
+        app:layout_constraintTop_toBottomOf="@+id/btnDisconnect" />
+
+    <ListView
+        android:id="@+id/listPairedDevices"
+        android:layout_width="336dp"
+        android:layout_height="319dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPairedDevice" />
+</androidx.constraintlayout.widget.ConstraintLayout>
